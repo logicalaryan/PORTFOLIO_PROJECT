@@ -63,21 +63,17 @@
         <div class="text">
           <h2>Hi, I'm Aryan 👋</h2>
           <p>
-            I am a full stack developer skilled in building scalable web
-            applications using modern frontend and backend technologies. I have
-            hands-on experience with React, Node.js, and databases to design
-            complete end-to-end solutions. Along with web development, I also
-            build machine learning projects to solve real-world problems using
-            data-driven approaches. I enjoy transforming ideas into functional
-            products with clean code and strong architecture. I have worked on
-            projects like e-commerce clones and prediction systems that improved
-            my problem-solving skills. I understand APIs, authentication, and
-            deployment on cloud platforms. I am comfortable collaborating in
-            teams and following agile practices. My ML experience includes data
-            preprocessing, model training, and evaluation. I continuously learn
-            new tools to stay updated with industry trends. I aim to contribute
-            to impactful projects while growing as a versatile software
-            engineer.
+            I am an AI-focused full stack developer with hands-on internship
+            experience based in Vietnam, where I worked directly under CEO
+            guidance to build a CRM system from the ground up. During my time
+            there, I gained deep exposure to machine learning, AI, and AI voice
+            agents — technologies I now consider my core expertise. I combine
+            strong full stack skills (React, Node.js, Python) with a passion for
+            agentic AI systems that can think, act, and communicate autonomously.
+            I thrive at the intersection of product thinking and cutting-edge AI,
+            building solutions that are not just functional but genuinely
+            intelligent. I continuously push the boundary of what software can
+            do — from voice-powered agents to end-to-end AI pipelines.
           </p>
 
           <div class="links">
@@ -148,7 +144,95 @@
         </div>
       </section>
 
-      <!-- SECTION 3: Testimony -->
+      <!-- SECTION 3: Work Experience -->
+      <section id="experience" class="experience-section">
+        <h2>Work Experience</h2>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-title-group">
+              <span class="exp-role">AI &amp; Full Stack Developer Intern</span>
+              <span class="exp-company"><i class="fa-solid fa-location-dot"></i> Startup — Ho Chi Minh City, Vietnam</span>
+            </div>
+            <span class="exp-badge">2025</span>
+          </div>
+
+          <div class="exp-items">
+
+            <div class="exp-item">
+              <button class="exp-toggle" onclick="toggleExp(this)">
+                <i class="fa-solid fa-graduation-cap"></i> What I Learnt
+                <i class="fa-solid fa-chevron-down exp-chevron"></i>
+              </button>
+              <div class="exp-body">
+                Gained deep, practical exposure to building AI-powered products in a
+                fast-paced startup environment. Worked closely with leadership to
+                understand product requirements, translate them into technical
+                solutions, and iterate rapidly. Strengthened my skills across the
+                full development lifecycle — from requirement gathering and system
+                design to deployment and testing.
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <button class="exp-toggle" onclick="toggleExp(this)">
+                <i class="fa-solid fa-hammer"></i> What I Built
+                <i class="fa-solid fa-chevron-down exp-chevron"></i>
+              </button>
+              <div class="exp-body">
+                Developed a full-featured CRM (Customer Relationship Management)
+                system under direct guidance of the CEO. The CRM handled client
+                data management, interaction tracking, pipeline management, and
+                reporting dashboards — built end-to-end with a clean backend API
+                and responsive frontend interface.
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <button class="exp-toggle" onclick="toggleExp(this)">
+                <i class="fa-solid fa-layer-group"></i> Tech Stack
+                <i class="fa-solid fa-chevron-down exp-chevron"></i>
+              </button>
+              <div class="exp-body">
+                <div class="tech-badges">
+                  <span class="tech-badge">Machine Learning</span>
+                  <span class="tech-badge">Artificial Intelligence</span>
+                  <span class="tech-badge">AI Voice Agents</span>
+                  <span class="tech-badge">Agentic AI</span>
+                  <span class="tech-badge">LLM Integration</span>
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">REST APIs</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <script>
+        function toggleExp(btn) {
+          const item = btn.parentElement;
+          const body = item.querySelector('.exp-body');
+          const chevron = btn.querySelector('.exp-chevron');
+          const isOpen = item.classList.contains('open');
+          // close all
+          document.querySelectorAll('.exp-item').forEach(i => {
+            i.classList.remove('open');
+            i.querySelector('.exp-body').style.maxHeight = null;
+            i.querySelector('.exp-chevron').style.transform = 'rotate(0deg)';
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            body.style.maxHeight = body.scrollHeight + 'px';
+            chevron.style.transform = 'rotate(180deg)';
+          }
+        }
+      </script>
+
+      <!-- SECTION 4: Testimony -->
       <section id="testimony" class="testimony-section">
         <h2>Why I code</h2>
 
@@ -161,22 +245,50 @@
           </div>
 
           <div class="text">
-            I bridge the gap between complex machine learning models and
-            user-friendly web applications, creating a rare intersection of data
-            science and full-stack development. By maintaining a strong command
-            of both React for dynamic frontends and Node.js for scalable
-            backends, I take end-to-end ownership over every project I build.
-            Unlike a traditional developer, I love integrating data-driven logic
-            and Python-based prediction systems to solve real-world problems
-            rather than just writing static code. I prioritize clean
-            architecture and scalable solutions, ensuring that every
-            product—from an e-commerce clone to a custom API—is built on a
-            foundation of professional, industry-standard practices.
+            My core interest lies in AI voice agents and agentic AI — systems
+            that don't just respond but reason, plan, and act. I am fascinated
+            by the idea of building autonomous AI that can handle real-world
+            tasks end-to-end through voice and language interfaces. During my
+            internship in Vietnam, I got hands-on with AI voice agent pipelines
+            and agentic workflows, which solidified this passion. I code because
+            I believe the next wave of software won't just be apps — it will be
+            agents that work alongside humans. I want to be at the forefront of
+            that shift, building the tools and systems that make AI truly useful
+            in everyday life.
           </div>
         </div>
       </section>
 
-      <!-- SECTION 4: Contact -->
+      <!-- SECTION 4: Projects -->
+      <section id="projects" class="testimony-section">
+        <h2>My Projects</h2>
+
+        <div class="group">
+          <div class="text">
+            <p><strong>CRM System (Vietnam Internship):</strong> Built a full
+            Customer Relationship Management system under direct CEO guidance
+            during my internship in Vietnam. Handled end-to-end development
+            including backend logic, database design, and frontend integration.</p>
+
+            <p><strong>AI Voice Agent:</strong> Developed an AI-powered voice
+            agent capable of handling real-time conversations autonomously,
+            leveraging speech recognition, LLM reasoning, and text-to-speech
+            pipelines to create a seamless voice-driven experience.</p>
+
+            <p><strong>ML Prediction System:</strong> Built a machine learning
+            model for real-world data prediction, covering data preprocessing,
+            model training, evaluation, and deployment as an API endpoint
+            consumable by frontend applications.</p>
+
+            <p><strong>Agentic AI Workflows:</strong> Designed and implemented
+            multi-step agentic AI pipelines where autonomous agents plan,
+            execute, and self-correct tasks — exploring the frontier of what AI
+            can do beyond simple chat.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: Contact -->
       <section id="contact" class="contact-section">
         <h2>Contact</h2>
 

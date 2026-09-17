@@ -196,7 +196,148 @@ nav .right a span {
   flex: 8;
 }
 
+/* SECTION 3: Work Experience */
+.experience-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.experience-section h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.exp-card {
+  border: 1.5px solid #d3d3d3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+.exp-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exp-role {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.exp-company {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.exp-company i {
+  margin-right: 4px;
+}
+
+.exp-badge {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--background-color);
+  opacity: 0.85;
+}
+
+.exp-items {
+  padding: 10px 0;
+}
+
+.exp-item {
+  border-bottom: 1px solid #ececec;
+}
+
+.exp-item:last-child {
+  border-bottom: none;
+}
+
+.exp-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.exp-toggle:hover {
+  background: #f4f5f7;
+}
+
+.exp-toggle i:first-child {
+  color: var(--link-color);
+  width: 18px;
+}
+
+.exp-chevron {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  color: #999;
+}
+
+.exp-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 28px;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.exp-item.open .exp-body {
+  padding-bottom: 18px;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.tech-badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: var(--link-color);
+  border: 1px solid #c7d4fb;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.tech-badge:hover {
+  background: var(--link-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* SECTION 4: Contact */
+
 .contact-section {
   padding: 0 50px;
   margin-bottom: 100px;
