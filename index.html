@@ -1,352 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan OS — Portfolio</title>
+  <meta name="description" content="Aryan's developer portfolio — AI Full Stack Engineer. Built like a personal OS." />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <link rel="stylesheet" href="styles.css" />
+<body>
 
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <nav>
-      <div class="left">
-        <a href="/">ARYAN</a>
+  <!-- ══════════════════════════════════════
+         DESKTOP ENVIRONMENT
+    ══════════════════════════════════════ -->
+  <div id="desktop">
+
+    <!-- Wallpaper subtle grid -->
+    <div class="wallpaper-grid"></div>
+
+    <!-- ── DESKTOP ICONS ── -->
+    <div class="desktop-icons">
+      <button class="desk-icon" onclick="openWindow('win-about')">
+        <div class="icon-img"><i class="fa-solid fa-user"></i></div>
+        <span>About</span>
+      </button>
+      <button class="desk-icon" onclick="openWindow('win-skills')">
+        <div class="icon-img"><i class="fa-solid fa-code"></i></div>
+        <span>Skills</span>
+      </button>
+      <button class="desk-icon" onclick="openWindow('win-experience')">
+        <div class="icon-img"><i class="fa-solid fa-briefcase"></i></div>
+        <span>Experience</span>
+      </button>
+      <button class="desk-icon" onclick="openWindow('win-projects')">
+        <div class="icon-img"><i class="fa-solid fa-folder-open"></i></div>
+        <span>Projects</span>
+      </button>
+      <button class="desk-icon" onclick="openWindow('win-contact')">
+        <div class="icon-img"><i class="fa-solid fa-envelope"></i></div>
+        <span>Contact</span>
+      </button>
+    </div>
+
+    <!-- ══════════════════════════════════════
+           APP WINDOWS
+      ══════════════════════════════════════ -->
+
+    <!-- ABOUT ME -->
+    <div class="win" id="win-about" style="top:80px;left:120px;width:620px;">
+      <div class="win-bar" onmousedown="startDrag(event,'win-about')">
+        <div class="win-controls">
+          <button class="wbtn close" onclick="closeWindow('win-about')" title="Close"></button>
+          <button class="wbtn minimize" onclick="minimizeWindow('win-about')" title="Minimize"></button>
+          <button class="wbtn maximize" onclick="maximizeWindow('win-about')" title="Maximize"></button>
+        </div>
+        <span class="win-title"><i class="fa-solid fa-user"></i> About Me</span>
       </div>
-
-      <div class="right">
-        <a
-          href="https://github.com/logicalaryan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-github"></i>
-          <span>Github</span>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/justcodesaryan/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-linkedin"></i>
-          <span>Linkedin</span>
-        </a>
-
-        <a href="mailto:aryanuseful@gmail.com">
-          <i class="fa-solid fa-envelope"></i>
-          <span>Email</span>
-        </a>
+      <div class="win-body">
+        <div class="about-layout">
+          <div class="about-photo">
+            <img src="images/Screenshot 2025-12-18 002348.png" alt="Aryan headshot" />
+            <div class="about-name" style="font-size: 14px; text-align: center;">Aryan Singh Raghuvanshi</div>
+            <div class="about-role">Software Engineer</div>
+            <div class="about-links">
+              <a href="https://github.com/logicalaryan" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/justcodesaryan/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="mailto:aryanuseful@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="about-text">
+            <h2>Hi, I'm Aryan 👋</h2>
+            <p>
+              Computer Science undergraduate with hands-on software engineering experience building full-stack
+              applications using <strong>React, Python, and PostgreSQL</strong>, and deploying services with
+              <strong>Docker and Kubernetes</strong>.
+            </p>
+            <p style="margin-bottom: 20px;">
+              Delivered end-to-end features and debugged production issues while collaborating within a multinational,
+              cross-timezone Agile team. Strong foundation in data structures, databases, and version control (Git),
+              with a track record of independently learning unfamiliar codebases and shipping reliable fixes.
+            </p>
+            <div class="about-actions">
+              <button class="os-btn" onclick="openWindow('win-skills')"><i class="fa-solid fa-code"></i> Skills</button>
+              <button class="os-btn" onclick="openWindow('win-experience')"><i class="fa-solid fa-briefcase"></i>
+                Experience</button>
+              <button class="os-btn" onclick="openWindow('win-projects')"><i class="fa-solid fa-folder-open"></i>
+                Projects</button>
+              <button class="os-btn" onclick="openWindow('win-contact')"><i class="fa-solid fa-envelope"></i>
+                Contact</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </div>
 
-    <main>
-      <!-- SECTION 1: Hero -->
-      <section class="hero-section">
-        <div class="text">
-          <h2>Hi, I'm Aryan 👋</h2>
-          <p>
-            I am an AI-focused full stack developer with hands-on internship
-            experience based in Vietnam, where I worked directly under CEO
-            guidance to build a CRM system from the ground up. During my time
-            there, I gained deep exposure to machine learning, AI, and AI voice
-            agents — technologies I now consider my core expertise. I combine
-            strong full stack skills (React, Node.js, Python) with a passion for
-            agentic AI systems that can think, act, and communicate autonomously.
-            I thrive at the intersection of product thinking and cutting-edge AI,
-            building solutions that are not just functional but genuinely
-            intelligent. I continuously push the boundary of what software can
-            do — from voice-powered agents to end-to-end AI pipelines.
-          </p>
+    <!-- SKILLS -->
+    <div class="win" id="win-skills" style="top:100px;left:180px;width:680px;">
+      <div class="win-bar" onmousedown="startDrag(event,'win-skills')">
+        <div class="win-controls">
+          <button class="wbtn close" onclick="closeWindow('win-skills')"></button>
+          <button class="wbtn minimize" onclick="minimizeWindow('win-skills')"></button>
+          <button class="wbtn maximize" onclick="maximizeWindow('win-skills')"></button>
+        </div>
+        <span class="win-title"><i class="fa-solid fa-code"></i> Skills</span>
+      </div>
+      <div class="win-body">
+        <p class="win-subtitle">A blend of full-stack engineering and cutting-edge AI capabilities.</p>
 
-          <div class="links">
-            <a href="#skills">
-              <i class="fa-solid fa-code"></i>
-              <span>Skills</span>
-            </a>
-
-            <a href="#testimony">
-              <i class="fa-solid fa-pen"></i>
-              <span>Testimony</span>
-            </a>
-
-            <a href="#contact">
-              <i class="fa-solid fa-envelope"></i>
-              <span>Contact</span>
-            </a>
+        <div class="skill-group">
+          <div class="skill-group-label"><i class="fa-solid fa-display"></i> Frontend</div>
+          <div class="skill-chips">
+            <div class="skill-chip"><img src="images/html-logo.webp" alt="HTML">HTML</div>
+            <div class="skill-chip"><img src="images/css-logo.webp" alt="CSS">CSS</div>
+            <div class="skill-chip"><img src="images/javascript-logo.webp" alt="JS">JavaScript</div>
+            <div class="skill-chip"><img src="images/react-logo.webp" alt="React">React.js</div>
           </div>
         </div>
 
-        <div class="headshot">
-          <img
-            src="images/Screenshot 2025-12-18 002348.png"
-            alt="john doe headshot"
-          />
-        </div>
-      </section>
-
-      <!-- SECTION 2: Skills -->
-      <section id="skills" class="skills-section">
-        <h2>Skills</h2>
-        <p class="skills-subtitle">A blend of full-stack engineering and cutting-edge AI capabilities.</p>
-
-        <!-- Row 1: scrolls left -->
-        <div class="carousel-wrapper">
-          <div class="carousel-track track-left">
-            <div class="skill-pill"><img src="images/html-logo.webp" alt="html" /><span>HTML</span></div>
-            <div class="skill-pill"><img src="images/css-logo.webp" alt="css" /><span>CSS</span></div>
-            <div class="skill-pill"><img src="images/javascript-logo.webp" alt="js" /><span>JavaScript</span></div>
-            <div class="skill-pill"><img src="images/react-logo.webp" alt="react" /><span>React.js</span></div>
-            <div class="skill-pill"><img src="images/node-logo.webp" alt="node" /><span>Node.js</span></div>
-            <div class="skill-pill"><i class="fa-brands fa-python"></i><span>Python</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-database"></i><span>REST APIs</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-microphone"></i><span>AI Voice Agents</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-robot"></i><span>Agentic AI</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-brain"></i><span>Machine Learning</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-comments"></i><span>LLM Integration</span></div>
-            <!-- Duplicate for seamless loop -->
-            <div class="skill-pill"><img src="images/html-logo.webp" alt="html" /><span>HTML</span></div>
-            <div class="skill-pill"><img src="images/css-logo.webp" alt="css" /><span>CSS</span></div>
-            <div class="skill-pill"><img src="images/javascript-logo.webp" alt="js" /><span>JavaScript</span></div>
-            <div class="skill-pill"><img src="images/react-logo.webp" alt="react" /><span>React.js</span></div>
-            <div class="skill-pill"><img src="images/node-logo.webp" alt="node" /><span>Node.js</span></div>
-            <div class="skill-pill"><i class="fa-brands fa-python"></i><span>Python</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-database"></i><span>REST APIs</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-microphone"></i><span>AI Voice Agents</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-robot"></i><span>Agentic AI</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-brain"></i><span>Machine Learning</span></div>
-            <div class="skill-pill"><i class="fa-solid fa-comments"></i><span>LLM Integration</span></div>
+        <div class="skill-group">
+          <div class="skill-group-label"><i class="fa-solid fa-server"></i> Backend</div>
+          <div class="skill-chips">
+            <div class="skill-chip"><img src="images/node-logo.webp" alt="Node">Node.js</div>
+            <div class="skill-chip"><i class="fa-brands fa-python"></i>Python</div>
+            <div class="skill-chip"><i class="fa-solid fa-database"></i>REST APIs</div>
           </div>
         </div>
 
-        <!-- Row 2: scrolls right -->
-        <div class="carousel-wrapper">
-          <div class="carousel-track track-right">
-            <div class="skill-pill alt"><i class="fa-solid fa-robot"></i><span>Agentic AI</span></div>
-            <div class="skill-pill alt"><img src="images/react-logo.webp" alt="react" /><span>React.js</span></div>
-            <div class="skill-pill alt"><i class="fa-solid fa-microphone"></i><span>AI Voice Agents</span></div>
-            <div class="skill-pill alt"><img src="images/node-logo.webp" alt="node" /><span>Node.js</span></div>
-            <div class="skill-pill alt"><i class="fa-solid fa-comments"></i><span>LLM Integration</span></div>
-            <div class="skill-pill alt"><img src="images/javascript-logo.webp" alt="js" /><span>JavaScript</span></div>
-            <div class="skill-pill alt"><i class="fa-brands fa-python"></i><span>Python</span></div>
-            <div class="skill-pill alt"><i class="fa-solid fa-brain"></i><span>Machine Learning</span></div>
-            <div class="skill-pill alt"><img src="images/html-logo.webp" alt="html" /><span>HTML</span></div>
-            <div class="skill-pill alt"><i class="fa-solid fa-database"></i><span>REST APIs</span></div>
-            <div class="skill-pill alt"><img src="images/css-logo.webp" alt="css" /><span>CSS</span></div>
-            <!-- Duplicate -->
-            <div class="skill-pill alt"><i class="fa-solid fa-robot"></i><span>Agentic AI</span></div>
-            <div class="skill-pill alt"><img src="images/react-logo.webp" alt="react" /><span>React.js</span></div>
-            <div class="skill-pill alt"><i class="fa-solid fa-microphone"></i><span>AI Voice Agents</span></div>
-            <div class="skill-pill alt"><img src="images/node-logo.webp" alt="node" /><span>Node.js</span></div>
-            <div class="skill-pill alt"><i class="fa-solid fa-comments"></i><span>LLM Integration</span></div>
-            <div class="skill-pill alt"><img src="images/javascript-logo.webp" alt="js" /><span>JavaScript</span></div>
-            <div class="skill-pill alt"><i class="fa-brands fa-python"></i><span>Python</span></div>
-            <div class="skill-pill alt"><i class="fa-solid fa-brain"></i><span>Machine Learning</span></div>
-            <div class="skill-pill alt"><img src="images/html-logo.webp" alt="html" /><span>HTML</span></div>
-            <div class="skill-pill alt"><i class="fa-solid fa-database"></i><span>REST APIs</span></div>
-            <div class="skill-pill alt"><img src="images/css-logo.webp" alt="css" /><span>CSS</span></div>
+        <div class="skill-group">
+          <div class="skill-group-label"><i class="fa-solid fa-brain"></i> AI &amp; ML</div>
+          <div class="skill-chips">
+            <div class="skill-chip"><i class="fa-solid fa-microphone"></i>AI Voice Agents</div>
+            <div class="skill-chip"><i class="fa-solid fa-robot"></i>Agentic AI</div>
+            <div class="skill-chip"><i class="fa-solid fa-chart-line"></i>Machine Learning</div>
+            <div class="skill-chip"><i class="fa-solid fa-comments"></i>LLM Integration</div>
           </div>
         </div>
-      </section>
 
-      <!-- SECTION 3: Work Experience -->
-      <section id="experience" class="experience-section">
-        <h2>Work Experience</h2>
 
-        <div class="exp-card">
+      </div>
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <div class="win" id="win-experience" style="top:120px;left:200px;width:640px;">
+      <div class="win-bar" onmousedown="startDrag(event,'win-experience')">
+        <div class="win-controls">
+          <button class="wbtn close" onclick="closeWindow('win-experience')"></button>
+          <button class="wbtn minimize" onclick="minimizeWindow('win-experience')"></button>
+          <button class="wbtn maximize" onclick="maximizeWindow('win-experience')"></button>
+        </div>
+        <span class="win-title"><i class="fa-solid fa-briefcase"></i> Work Experience</span>
+      </div>
+      <div class="win-body">
+        <div class="exp-card" style="position: relative;">
+          <button onclick="this.style.display='none'" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: var(--text2); cursor: pointer; font-size: 14px;"><i class="fa-solid fa-xmark"></i></button>
           <div class="exp-header">
             <div class="exp-title-group">
-              <span class="exp-role">AI &amp; Full Stack Developer Intern</span>
-              <span class="exp-company"><i class="fa-solid fa-location-dot"></i> Startup — Ho Chi Minh City, Vietnam</span>
+              <span class="exp-role">Software Engineering Intern – Full Cycle Developer</span>
+              <span class="exp-company"><i class="fa-solid fa-location-dot"></i> Skill Wanderer — EdTech Startup
+                (Southeast Asia / Vietnam)</span>
             </div>
-            <span class="exp-badge">2025</span>
+            <span class="exp-badge">April–July</span>
           </div>
-
-          <div class="exp-items">
-
-            <div class="exp-item">
-              <button class="exp-toggle" onclick="toggleExp(this)">
-                <i class="fa-solid fa-graduation-cap"></i> What I Learnt
-                <i class="fa-solid fa-chevron-down exp-chevron"></i>
-              </button>
-              <div class="exp-body">
-                Gained deep, practical exposure to building AI-powered products in a
-                fast-paced startup environment. Worked closely with leadership to
-                understand product requirements, translate them into technical
-                solutions, and iterate rapidly. Strengthened my skills across the
-                full development lifecycle — from requirement gathering and system
-                design to deployment and testing.
-              </div>
-            </div>
-
-            <div class="exp-item">
-              <button class="exp-toggle" onclick="toggleExp(this)">
-                <i class="fa-solid fa-hammer"></i> What I Built
-                <i class="fa-solid fa-chevron-down exp-chevron"></i>
-              </button>
-              <div class="exp-body">
-                Developed a full-featured CRM (Customer Relationship Management)
-                system under direct guidance of the CEO. The CRM handled client
-                data management, interaction tracking, pipeline management, and
-                reporting dashboards — built end-to-end with a clean backend API
-                and responsive frontend interface.
-              </div>
-            </div>
-
-            <div class="exp-item">
-              <button class="exp-toggle" onclick="toggleExp(this)">
-                <i class="fa-solid fa-layer-group"></i> Tech Stack
-                <i class="fa-solid fa-chevron-down exp-chevron"></i>
-              </button>
-              <div class="exp-body">
-                <div class="tech-badges">
-                  <span class="tech-badge">Machine Learning</span>
-                  <span class="tech-badge">Artificial Intelligence</span>
-                  <span class="tech-badge">AI Voice Agents</span>
-                  <span class="tech-badge">Agentic AI</span>
-                  <span class="tech-badge">LLM Integration</span>
-                  <span class="tech-badge">Python</span>
-                  <span class="tech-badge">React</span>
-                  <span class="tech-badge">Node.js</span>
-                  <span class="tech-badge">REST APIs</span>
-                </div>
-              </div>
-            </div>
-
+          <div class="exp-content" style="padding: 16px 20px;">
+            <ul
+              style="list-style-type: disc; padding-left: 20px; font-size: 13px; line-height: 1.6; color: var(--text2); display: flex; flex-direction: column; gap: 8px;">
+              <li>Debugged and resolved user-reported defects in a production <strong>React</strong> application,
+                tracing root causes, using <strong>Git</strong> for version control, and documenting fixes to prevent
+                repeat escalations.</li>
+              <li>Collaborated within a 6-member cross-functional, cross-timezone <strong>Agile</strong> team (Vietnam,
+                Indonesia, Nigeria) through sprint ceremonies, issue triage, and peer code reviews.</li>
+              <li>Ramped up independently on an unfamiliar production codebase, shipping fixes with minimal defects
+                through self-directed code reading and teammate collaboration.</li>
+              <li>Gained exposure to <strong>Java, Spring Boot, and TypeScript</strong> through peer collaboration and
+                codebase review alongside teammates working in those stacks.</li>
+              <li>Built a document Q&A pipeline in <strong>Python</strong>, implementing text chunking, embeddings, and
+                semantic search for retrieval over uploaded documents.</li>
+              <li>Partnered directly with the CEO on client-facing production issues, owning reproduction, debugging,
+                fix verification, and status communication end-to-end.</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <script>
-        function toggleExp(btn) {
-          const item = btn.parentElement;
-          const body = item.querySelector('.exp-body');
-          const chevron = btn.querySelector('.exp-chevron');
-          const isOpen = item.classList.contains('open');
-          // close all
-          document.querySelectorAll('.exp-item').forEach(i => {
-            i.classList.remove('open');
-            i.querySelector('.exp-body').style.maxHeight = null;
-            i.querySelector('.exp-chevron').style.transform = 'rotate(0deg)';
-          });
-          if (!isOpen) {
-            item.classList.add('open');
-            body.style.maxHeight = body.scrollHeight + 'px';
-            chevron.style.transform = 'rotate(180deg)';
-          }
-        }
-      </script>
-
-      <!-- SECTION 4: Testimony -->
-      <section id="testimony" class="testimony-section">
-        <h2>Why I code</h2>
-
-        <div class="group">
-          <div class="person-details">
-            <img src="images/Screenshot 2025-12-18 002348.png" alt="code" />
-            <p style="font-weight: bold; font-size: medium">
-              AI Full Stack Engineer
-            </p>
+    <!-- PROJECTS -->
+    <div class="win" id="win-projects" style="top:90px;left:160px;width:700px;">
+      <div class="win-bar" onmousedown="startDrag(event,'win-projects')">
+        <div class="win-controls">
+          <button class="wbtn close" onclick="closeWindow('win-projects')"></button>
+          <button class="wbtn minimize" onclick="minimizeWindow('win-projects')"></button>
+          <button class="wbtn maximize" onclick="maximizeWindow('win-projects')"></button>
+        </div>
+        <span class="win-title"><i class="fa-solid fa-folder-open"></i> My Projects</span>
+      </div>
+      <div class="win-body">
+        <div class="projects-list">
+          <div class="project-card" style="position: relative;">
+            <button onclick="this.parentElement.style.display='none'" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: var(--text2); cursor: pointer; font-size: 14px;"><i class="fa-solid fa-xmark"></i></button>
+            <div class="proj-icon"><i class="fa-solid fa-database"></i></div>
+            <div class="proj-info">
+              <div class="proj-title">AI Document Q&A RAG Pipeline <span class="proj-sub">· Personal Project</span>
+              </div>
+              <p>Designed a RAG system using LangChain and LlamaIndex for natural-language Q&A over uploaded documents.
+                Engineered a processing pipeline indexing embeddings in a Chroma vector database, fully containerized
+                with Docker and Kubernetes.</p>
+              <div class="proj-tags">
+                <span>Python</span><span>LangChain</span><span>Chroma</span><span>Docker</span><span>Kubernetes</span>
+              </div>
+            </div>
           </div>
-
-          <div class="text">
-            My core interest lies in AI voice agents and agentic AI — systems
-            that don't just respond but reason, plan, and act. I am fascinated
-            by the idea of building autonomous AI that can handle real-world
-            tasks end-to-end through voice and language interfaces. During my
-            internship in Vietnam, I got hands-on with AI voice agent pipelines
-            and agentic workflows, which solidified this passion. I code because
-            I believe the next wave of software won't just be apps — it will be
-            agents that work alongside humans. I want to be at the forefront of
-            that shift, building the tools and systems that make AI truly useful
-            in everyday life.
+          <div class="project-card" style="position: relative;">
+            <button onclick="this.parentElement.style.display='none'" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: var(--text2); cursor: pointer; font-size: 14px;"><i class="fa-solid fa-xmark"></i></button>
+            <div class="proj-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="proj-info">
+              <div class="proj-title">Interactive Web Automation Agent <span class="proj-sub">· Personal Project</span>
+              </div>
+              <p>Built an asynchronous browser automation agent using Stagehand and Browserbase. Replaced brittle
+                selector-based scraping with an LLM-driven decision layer that reads page state dynamically.</p>
+              <div class="proj-tags">
+                <span>Node.js</span><span>JavaScript</span><span>Stagehand</span><span>Browserbase</span></div>
+            </div>
+          </div>
+          <div class="project-card" style="position: relative;">
+            <button onclick="this.parentElement.style.display='none'" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: var(--text2); cursor: pointer; font-size: 14px;"><i class="fa-solid fa-xmark"></i></button>
+            <div class="proj-icon"><i class="fa-solid fa-microphone"></i></div>
+            <div class="proj-info">
+              <div class="proj-title">AI Voice Healthcare Agent <span class="proj-sub">· Personal Project</span></div>
+              <p>Built a real-time voice agent using Retell AI to automate patient interactions through natural-language
+                conversations. Implemented workflows for appointment booking and information retrieval.</p>
+              <div class="proj-tags"><span>Retell AI</span><span>LLMs</span><span>Voice AI</span></div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- SECTION 4: Projects -->
-      <section id="projects" class="testimony-section">
-        <h2>My Projects</h2>
 
-        <div class="group">
-          <div class="text">
-            <p><strong>CRM System (Vietnam Internship):</strong> Built a full
-            Customer Relationship Management system under direct CEO guidance
-            during my internship in Vietnam. Handled end-to-end development
-            including backend logic, database design, and frontend integration.</p>
 
-            <p><strong>AI Voice Agent:</strong> Developed an AI-powered voice
-            agent capable of handling real-time conversations autonomously,
-            leveraging speech recognition, LLM reasoning, and text-to-speech
-            pipelines to create a seamless voice-driven experience.</p>
-
-            <p><strong>ML Prediction System:</strong> Built a machine learning
-            model for real-world data prediction, covering data preprocessing,
-            model training, evaluation, and deployment as an API endpoint
-            consumable by frontend applications.</p>
-
-            <p><strong>Agentic AI Workflows:</strong> Designed and implemented
-            multi-step agentic AI pipelines where autonomous agents plan,
-            execute, and self-correct tasks — exploring the frontier of what AI
-            can do beyond simple chat.</p>
-          </div>
+    <!-- CONTACT -->
+    <div class="win" id="win-contact" style="top:100px;left:170px;width:640px;">
+      <div class="win-bar" onmousedown="startDrag(event,'win-contact')">
+        <div class="win-controls">
+          <button class="wbtn close" onclick="closeWindow('win-contact')"></button>
+          <button class="wbtn minimize" onclick="minimizeWindow('win-contact')"></button>
+          <button class="wbtn maximize" onclick="maximizeWindow('win-contact')"></button>
         </div>
-      </section>
-
-      <!-- SECTION 5: Contact -->
-      <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-
-        <div class="group">
-          <div class="text">
-            I'm always open to new opportunities and would love to collaborate
-            on innovative full-stack or machine learning projects. The best way
-            to reach me is through the contact form on my portfolio or by
-            emailing me directly at aryanuseful@gmail.com. You can also find me
-            on LinkedIn and GitHub, where I regularly share my latest work and
-            code updates. I am happy to hop on a call or exchange messages to
-            discuss how my technical skills can help solve your specific
-            problems. I make it a priority to respond to all inquiries as
-            quickly as possible to keep the momentum of our conversation going.
-            When you send a message, feel free to include details about your
-            project so I can provide the most helpful feedback from the start.
-            Even if you don't have a specific project in mind, I’m always open
-            to networking and connecting with other developers and tech
-            enthusiasts.
+        <span class="win-title"><i class="fa-solid fa-envelope"></i> Contact</span>
+      </div>
+      <div class="win-body">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>I'm always open to new opportunities and would love to collaborate
+              on innovative full-stack or AI projects. The best way to reach me is
+              through the form or by emailing me directly.</p>
+            <div class="contact-links">
+              <a href="mailto:aryanuseful@gmail.com"><i class="fa-solid fa-envelope"></i> aryanuseful@gmail.com</a>
+              <a href="https://github.com/logicalaryan" target="_blank"><i class="fa-brands fa-github"></i>
+                logicalaryan</a>
+              <a href="https://www.linkedin.com/in/justcodesaryan/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i> justcodesaryan</a>
+            </div>
           </div>
-
-          <form action="https://formspree.io/f/xqezakqq" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" cols="30" rows="10" required>
-            </textarea>
-
-            <button type="submit">Send Message</button>
+          <form class="contact-form" action="https://formspree.io/f/xqezakqq" method="POST">
+            <label for="os-name">Name</label>
+            <input type="text" id="os-name" name="name" placeholder="Your name" required />
+            <label for="os-email">Email</label>
+            <input type="email" id="os-email" name="email" placeholder="your@email.com" required />
+            <label for="os-message">Message</label>
+            <textarea id="os-message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+            <button type="submit" class="os-btn primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
           </form>
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+           TASKBAR
+      ══════════════════════════════════════ -->
+    <div id="taskbar">
+      <div class="taskbar-left">
+        <div class="taskbar-logo">⬡ ARYAN OS</div>
+      </div>
+      <div class="taskbar-center" id="taskbar-apps">
+        <button class="tb-app" onclick="openWindow('win-about')" title="About Me"><i
+            class="fa-solid fa-user"></i><span>About</span></button>
+        <button class="tb-app" onclick="openWindow('win-skills')" title="Skills"><i
+            class="fa-solid fa-code"></i><span>Skills</span></button>
+        <button class="tb-app" onclick="openWindow('win-experience')" title="Experience"><i
+            class="fa-solid fa-briefcase"></i><span>Experience</span></button>
+        <button class="tb-app" onclick="openWindow('win-projects')" title="Projects"><i
+            class="fa-solid fa-folder-open"></i><span>Projects</span></button>
+        <button class="tb-app" onclick="openWindow('win-contact')" title="Contact"><i
+            class="fa-solid fa-envelope"></i><span>Contact</span></button>
+      </div>
+      <div class="taskbar-right">
+        <a class="tb-link" href="https://github.com/logicalaryan" target="_blank" title="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a class="tb-link" href="https://www.linkedin.com/in/justcodesaryan/" target="_blank" title="LinkedIn"><i
+            class="fa-brands fa-linkedin"></i></a>
+        <div class="tb-clock" id="tb-clock">00:00</div>
+      </div>
+    </div>
+
+  </div><!-- /#desktop -->
+
+  <!-- ══════════════════════════════════════
+         MOBILE FALLBACK
+    ══════════════════════════════════════ -->
+  <div id="mobile-view">
+    <div class="mob-header">
+      <img src="images/Screenshot 2025-12-18 002348.png" alt="Aryan" />
+      <h1>Aryan</h1>
+      <p>AI Full Stack Engineer</p>
+      <div class="mob-links">
+        <a href="https://github.com/logicalaryan" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/justcodesaryan/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:aryanuseful@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <section class="mob-section">
+      <h2><i class="fa-solid fa-user"></i> About</h2>
+      <p>I am an AI-focused full stack developer with hands-on internship experience based in Vietnam, where I worked
+        directly under CEO guidance to build a CRM system. I gained deep exposure to ML, AI, and AI voice agents —
+        technologies I now consider my core expertise.</p>
+    </section>
+
+    <section class="mob-section">
+      <h2><i class="fa-solid fa-code"></i> Skills</h2>
+      <div class="mob-chips">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React.js</span>
+        <span>Node.js</span><span>Python</span><span>REST APIs</span>
+        <span>AI Voice Agents</span><span>Agentic AI</span><span>Machine Learning</span><span>LLM Integration</span>
+      </div>
+    </section>
+
+    <section class="mob-section">
+      <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+      <strong>AI &amp; Full Stack Developer Intern</strong>
+      <p><i class="fa-solid fa-location-dot"></i> Startup — Ho Chi Minh City, Vietnam · 2025</p>
+      <p>Built a full CRM system under direct CEO guidance. Gained hands-on exposure to ML, AI voice agents, agentic AI,
+        and LLM integration in a fast-paced startup environment.</p>
+      <div class="mob-chips"><span>Python</span><span>React</span><span>Node.js</span><span>AI Voice
+          Agents</span><span>Agentic AI</span></div>
+    </section>
+
+    <section class="mob-section">
+      <h2><i class="fa-solid fa-folder-open"></i> Projects</h2>
+      <div class="mob-project"><strong>CRM System</strong> — Built end-to-end under CEO guidance. Full client
+        management, pipeline tracking, dashboards.</div>
+      <div class="mob-project"><strong>AI Voice Agent</strong> — Real-time autonomous voice conversations via LLM + TTS
+        pipelines.</div>
+      <div class="mob-project"><strong>ML Prediction System</strong> — Data preprocessing, training, evaluation,
+        deployed as API.</div>
+      <div class="mob-project"><strong>Agentic AI Workflows</strong> — Multi-step autonomous agent pipelines with
+        self-correction.</div>
+    </section>
+
+    <section class="mob-section">
+      <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+      <form action="https://formspree.io/f/xqezakqq" method="POST" class="mob-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="your@email.com" required />
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    // ─── CLOCK ───────────────────────────────────────
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      document.getElementById('tb-clock').textContent = h + ':' + m;
+    }
+    updateClock();
+    setInterval(updateClock, 10000);
+
+    // ─── WINDOW MANAGEMENT ───────────────────────────
+    let zTop = 10;
+    const minimized = {};
+    const maximized = {};
+    const savedPos = {};
+
+    function openWindow(id) {
+      const win = document.getElementById(id);
+      if (!win) return;
+      // Restore if minimized
+      if (minimized[id]) {
+        win.style.display = 'flex';
+        minimized[id] = false;
+      }
+      win.style.display = 'flex';
+      win.classList.add('win-open');
+      bringToFront(win);
+      // Mark taskbar button active
+      updateTaskbar();
+    }
+
+    function closeWindow(id) {
+      const win = document.getElementById(id);
+      if (!win) return;
+      win.classList.remove('win-open');
+      win.classList.add('win-closing');
+      setTimeout(() => {
+        win.style.display = 'none';
+        win.classList.remove('win-closing');
+        minimized[id] = false;
+        maximized[id] = false;
+      }, 200);
+      updateTaskbar();
+    }
+
+    function minimizeWindow(id) {
+      const win = document.getElementById(id);
+      if (!win) return;
+      win.classList.add('win-closing');
+      setTimeout(() => {
+        win.style.display = 'none';
+        win.classList.remove('win-closing');
+        minimized[id] = true;
+      }, 200);
+      updateTaskbar();
+    }
+
+    function maximizeWindow(id) {
+      const win = document.getElementById(id);
+      if (!win) return;
+      if (maximized[id]) {
+        // restore
+        const p = savedPos[id];
+        win.style.top = p.top;
+        win.style.left = p.left;
+        win.style.width = p.width;
+        win.style.height = '';
+        win.style.borderRadius = '';
+        maximized[id] = false;
+      } else {
+        savedPos[id] = { top: win.style.top, left: win.style.left, width: win.style.width };
+        win.style.top = '0';
+        win.style.left = '0';
+        win.style.width = '100%';
+        win.style.height = 'calc(100vh - 52px)';
+        win.style.borderRadius = '0';
+        maximized[id] = true;
+      }
+      bringToFront(win);
+    }
+
+    function bringToFront(win) {
+      zTop++;
+      win.style.zIndex = zTop;
+    }
+
+    function updateTaskbar() {
+      document.querySelectorAll('.tb-app').forEach(btn => {
+        const target = btn.getAttribute('onclick').match(/'([^']+)'/)?.[1];
+        if (!target) return;
+        const win = document.getElementById(target);
+        if (win && win.style.display !== 'none' && !minimized[target]) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Open About centered on load
+    window.addEventListener('load', () => {
+      const win = document.getElementById('win-about');
+      const dw = window.innerWidth, dh = window.innerHeight - 52;
+      win.style.left = Math.max(20, (dw - 580) / 2) + 'px';
+      win.style.top = Math.max(20, (dh - 420) / 2) + 'px';
+      win.style.width = '580px';
+      openWindow('win-about');
+    });
+
+    // ─── DRAG ────────────────────────────────────────
+    let dragWin = null, dragOX = 0, dragOY = 0;
+
+    function startDrag(e, id) {
+      const win = document.getElementById(id);
+      if (maximized[id]) return;
+      dragWin = win;
+      bringToFront(win);
+      const rect = win.getBoundingClientRect();
+      dragOX = e.clientX - rect.left;
+      dragOY = e.clientY - rect.top;
+      document.addEventListener('mousemove', onDrag);
+      document.addEventListener('mouseup', stopDrag);
+      e.preventDefault();
+    }
+
+    function onDrag(e) {
+      if (!dragWin) return;
+      const deskH = document.getElementById('desktop').offsetHeight;
+      const deskW = document.getElementById('desktop').offsetWidth;
+      let newX = e.clientX - dragOX;
+      let newY = e.clientY - dragOY;
+      newX = Math.max(0, Math.min(newX, deskW - dragWin.offsetWidth));
+      newY = Math.max(0, Math.min(newY, deskH - dragWin.offsetHeight));
+      dragWin.style.left = newX + 'px';
+      dragWin.style.top = newY + 'px';
+    }
+
+    function stopDrag() {
+      dragWin = null;
+      document.removeEventListener('mousemove', onDrag);
+      document.removeEventListener('mouseup', stopDrag);
+    }
+
+    // Click desktop to focus window
+    document.querySelectorAll('.win').forEach(win => {
+      win.addEventListener('mousedown', () => bringToFront(win));
+    });
+
+    // ─── ACCORDION (Experience) ───────────────────────
+    function toggleExp(btn) {
+      const item = btn.parentElement;
+      const body = item.querySelector('.exp-body');
+      const chevron = btn.querySelector('.exp-chevron');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.exp-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.exp-body').style.maxHeight = null;
+        i.querySelector('.exp-chevron').style.transform = 'rotate(0deg)';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    }
+  </script>
+
+</body>
+
 </html>
